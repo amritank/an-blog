@@ -1,0 +1,56 @@
+/* Second div container */
+#blog-content-heading {
+    margin-bottom: 50px;
+}
+
+/* the form container element */
+#blog-details {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* We are doing this because the label and input box are actually next to each other. 
+    However I have set the width of the input boxes to 100% which pushes them to the next line. 
+    So its not like two elements are stacked one on top of the otber but the two elements are 
+    actually next to each other but the second element (input box)  is just pushed to the next line. 
+    Hence used line height instead of margin. As line height will apply to lines in paragraph 
+    where as margin is between elements.*/
+    line-height: 1.5rem;
+    font-weight: bolder;
+}
+
+/* Specifically setting the width of the input boxed only. */
+#username,
+#title {
+    height: 30px;
+}
+
+/* this includes the input box and the submit button */
+.form-data-elements,
+#submitButton {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#submitButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+.hidden {
+    display: none;
+}
+
+.show-error-msg {
+    display: block;
+    color: red;
+}
+
+@media screen and (max-width: 480px) {
+    .items {
+        width: 100%;
+    }
+}
+
+/* TODO: font of text area */
