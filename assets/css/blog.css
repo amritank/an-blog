@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#backSubmitButton {
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+#main-container {
+    min-height: 100vh;
+    padding: 15px;
+    border-bottom: 5px solid black;
+}
+
+.blog-post {
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 7px;
+}
+
+.post-header {
+    border-bottom: 2px solid black;
+}
+
+.post-content {
+    padding: 5px;
+}
+
+.post-sections {
+    margin-bottom: 5px;
+}
+
+.post-author {
+    color: gray;
+}
+
+
+footer {
+    padding: 20px;
+}
+
+#copyright {
+    text-align: center;
+}
