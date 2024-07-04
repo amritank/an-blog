@@ -12,9 +12,15 @@ let blogEntries = [];
 
 
 // <------ Callback definitions ----->
+// init function to load entries from local storage and then append to it.
 function loadEntries() {
-    blogEntries = loadFromLocalStorage();
+    const entries = loadFromLocalStorage();
+    if (entries) {
+        blogEntries = entries;
+    }
 }
+
+// Helper method to store blog entries to localstorage
 function storeToLocalStorage() {
     const blog = {
         username: usernameEl.value,
@@ -23,6 +29,8 @@ function storeToLocalStorage() {
     }
     console.log("Created blog entry: ");
     console.log(blog);
+
+    console.log(blogEntries);
 
     console.log("Push blog entry to the array");
     blogEntries.push(blog);
@@ -34,6 +42,7 @@ function storeToLocalStorage() {
     localStorage.setItem("blog", JSON.stringify(blogEntries));
 }
 
+// helper method to reset input box fields.
 function resetFields() {
     usernameEl.textContent = "";
     titleEl.textContent = "";
@@ -77,7 +86,6 @@ for (const ele of formEls) {
 // Submit form event listener.
 // TODO: how about trying submit event from form eleemnt
 submitEl.addEventListener('click', submitForm);
-
 
 
 // method called when page loads for first time:

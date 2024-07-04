@@ -1,4 +1,6 @@
-/* Second div container */
+/* Stylesheet for the form element in the index.html */
+
+/* Second div container heading*/
 #blog-content-heading {
     margin-bottom: 50px;
 }
@@ -18,19 +20,20 @@
     font-weight: bolder;
 }
 
-/* Specifically setting the width of the input boxed only. */
+/* Specifically setting the width of the input boxes only. This will automatically wrap the box into another line*/
 #username,
 #title {
     height: 30px;
 }
 
-/* this includes the input box and the submit button */
+/* This includes the input boxes and the submit button */
 .form-data-elements,
 #submitButton {
     width: 100%;
     margin-bottom: 15px;
 }
 
+/* submit button style */
 #submitButton {
     padding: 5px;
     background-color: black;
@@ -38,10 +41,12 @@
     font-weight: bolder;
 }
 
+/* Default class style applies to p element where an error will be shown */
 .hidden {
     display: none;
 }
 
+/* Class style that will be applies to the p element to display the error */
 .show-error-msg {
     display: block;
     color: red;
@@ -52,5 +57,3 @@
         width: 100%;
     }
 }
-
-/* TODO: font of text area */

@@ -1,3 +1,15 @@
+/* Stylesheet for index.html */
+
+/* Universal styles */
+:root {
+    /* --light-mode: linear-gradient(#FFEEEE, #DDEFBB);
+    --dark-mode: linear-gradient(#0f0c29, #302b63, #24243e); */
+    --light-mode: #FFEEEE;
+    --dark-mode: #0f0c29;
+    --border-dark-mode: lightgray;
+    --border-light-mode: black;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,10 +17,10 @@
     font-family: sans-serif;
 }
 
+/* Header + children styles */
 header {
     height: 10vh;
     border-bottom: 5px solid black;
-
 }
 
 .light-mode-togglebutton {
@@ -19,7 +31,7 @@ header {
     padding-right: 5px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../images/light.png");
+    background-image: url("../images/light-mode.png");
 }
 
 .dark-mode-togglebutton {
@@ -30,10 +42,29 @@ header {
     margin-right: 10px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../images/dark.png");
+    background-image: url("../images/dark-mode.png");
 }
 
+/* Body + children styles */
 
+/* Body light mode styles */
+.light-mode {
+    /* background: linear-gradient(#FFEEEE, #DDEFBB); */
+    background-color: var(--light-mode);
+    color: var(--border-light-mode);
+    transition: 0.5s;
+    transition-property: background-color;
+}
+
+/* Body dark mode styles */
+.dark-mode {
+    background-color: var(--dark-mode);
+    color: var(--border-dark-mode);
+    transition: 0.5s;
+    transition-property: background-color;
+}
+
+/* Main container */
 #container {
     width: 95%;
     height: 100vh;
@@ -42,11 +73,7 @@ header {
     margin: 0 auto;
 }
 
-#blog-form-container {
-    border-left: 5px solid black;
-
-}
-
+/* Two child div under main */
 .items {
     width: 100%;
     height: 100vh;
@@ -54,7 +81,7 @@ header {
     text-align: center;
 }
 
-/* First div container */
+/* First div container - blog image */
 #blog-img {
     border: 1px solid black;
     border-radius: 50%;
@@ -68,31 +95,12 @@ header {
     background: linear-gradient(#FDC830, #F37335);
 }
 
-.light-mode {
-    background: linear-gradient(#FFEEEE, #DDEFBB);
-    color: black;
-    transition-property: background-color;
-    transition-duration: 30s;
-    transition-timing-function: linear;
-}
-
-.dark-mode {
-    /* background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%); */
-    background: linear-gradient(#0f0c29, #302b63, #24243e);
-    color: white;
-    transition-property: background-color;
-    transition-duration: 30s;
-    transition-timing-function: ease-in;
+/* second div cotnainer - Fprm element */
+#blog-form-container {
+    border-left: 5px solid black;
 }
 
 
-
-/* Media queries */
-@media screen and (max-width: 768px) {
-    /* .items {
-        width: 48%;
-    } */
-}
 
 @media screen and (max-width: 480px) {
     #container {
