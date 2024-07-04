@@ -21,17 +21,17 @@ Welcome to my blog. This web app has been created using HTML, CSS and Javascript
 
 7. Moreover, the website has a light/dark mode toggle button at the top right corner of the page which will toggle the background/font color of the page between light and dark mode. 
 ![alt_text](assets/images/blog-entries-dark.png)
+&nbsp;
 ![alt_text](assets/images/index-dark.png)
 
-8. The author's info is presented in the footer in the blog entries page as shows below.
+9. The author's info is presented in the footer in the blog entries page as shows below.
 
-
-Installation
+## Installation
 N/A
 
-Usage
+## Usage
 In order to view the portfolio page visit: https://amritank.github.io/an-blog/
 
 
-License
+## License
 Please refer to the LICENSE in the repo.
