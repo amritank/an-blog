@@ -19,15 +19,16 @@ function listBlogPostsFromLocalStorage() {
             const divEl = document.createElement("div");
             divEl.classList.add('blog-post');
             const h4El = document.createElement("h4");
-            h4El.classList.add('post-header', 'post-sections');
+            h4El.classList.add('post-sections');
             h4El.textContent = title;
+            const hrEl = document.createElement('hr');
             const pContentEl = document.createElement("p");
             pContentEl.classList.add('post-sections', 'post-content');
             pContentEl.textContent = content;
             const pUnameEl = document.createElement("p");
             pUnameEl.classList.add('post-author');
             pUnameEl.textContent = "Posted by: " + uname;
-            divEl.append(h4El, pContentEl, pUnameEl);
+            divEl.append(h4El, hrEl, pContentEl, pUnameEl);
             mainEl.appendChild(divEl);
         });
     }
