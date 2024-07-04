@@ -1,8 +1,10 @@
+//Common functionality between both pages.
+
 const toggleEl = document.querySelector("#togglebutton");
-// const backButtonEl = document.querySelector("#backSubmitButton");
+const headerEl = document.querySelector("header");
+
 
 // <------ Callback definitions ----->
-
 // init
 function loadFromLocalStorage() {
     const storedVal = localStorage.getItem("blog");
@@ -13,7 +15,7 @@ function loadFromLocalStorage() {
     return entries;
 }
 
-
+// Callback function when light/dark mode toggle button is clicked.
 function toggleMode() {
     const currentMode = toggleEl.getAttribute("data-mode");
     console.log("current mode: " + currentMode);
@@ -21,10 +23,12 @@ function toggleMode() {
         console.log("setting dark-mode");
         document.body.setAttribute('class', 'dark-mode');
         toggleEl.setAttribute('class', 'dark-mode-togglebutton');
+        headerEl.setAttribute("class", "dark-mode-header");
         toggleEl.dataset.mode = "dark";
     } else {
         document.body.setAttribute('class', 'light-mode');
         toggleEl.setAttribute('class', 'light-mode-togglebutton');
+        headerEl.setAttribute("class", "light-mode-header");
         toggleEl.dataset.mode = "light";
     }
 }
